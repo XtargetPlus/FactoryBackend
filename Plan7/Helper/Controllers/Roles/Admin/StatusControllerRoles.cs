@@ -1,0 +1,10 @@
+﻿namespace Plan7.Helper.Controllers.Roles.Admin;
+
+public static class StatusControllerRoles
+{
+    public const string Add = "admin";
+    public const string Change = "admin";
+    public const string Delete = "admin";
+    public const string GetAll = "admin";
+    public const string GetTableStatuses = "admin, technologistDeveloper";
+}

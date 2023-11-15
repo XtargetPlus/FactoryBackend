@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="mdb-ui-kit\**" />
+    <Content Remove="mdb-ui-kit\**" />
+    <EmbeddedResource Remove="mdb-ui-kit\**" />
+    <None Remove="mdb-ui-kit\**" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--<ProjectReference Include="..\BL.Megrations"></ProjectReference>-->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceLayer.Details\ServiceLayer.Details.csproj" />
+    <ProjectReference Include="..\ServiceLayer.Equipments\ServiceLayer.Equipments.csproj" />
+    <ProjectReference Include="..\ServiceLayer.Graphs\ServiceLayer.Graphs.csproj" />
+    <ProjectReference Include="..\ServiceLayer.TechnologicalProcesses\ServiceLayer.TechnologicalProcesses.csproj" />
+    <ProjectReference Include="..\ServiceLayer.TelegramBot\ServiceLayer.TelegramBot.csproj" />
+    <ProjectReference Include="..\ServiceLayer.Tools\ServiceLayer.Tools.csproj" />
+    <ProjectReference Include="..\ServiceLayer\ServiceLayer.csproj" />
+  </ItemGroup>
+
+</Project>
